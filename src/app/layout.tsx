@@ -36,8 +36,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Sarah & Alexander | Wedding 2026",
-  description: "Join us to celebrate the wedding of Sarah Elizabeth and Alexander James on September 21, 2026 in Tuscany, Italy.",
+  title: "Midhun & Anju | Wedding 2026",
+  description: "Join us to celebrate the wedding of Midhun and Anju on April 11, 2026 in Parumala Church, Thiruvalla.",
 };
 
 export default function RootLayout({
