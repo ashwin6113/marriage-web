@@ -1,13 +1,14 @@
 'use client';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import image6 from '../../../public/images/WhatsApp Image 2026-03-23 at 22.57.26.jpeg';
+import image7 from '../../../public/images/WhatsApp Image 2026-03-23 at 23.00.21.jpeg';
 
 const couple = [
   {
     name: 'Midhun Jacob Alex',
     role: 'The Groom',
-    image:
-      'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=500&q=80&auto=format',
+    image: image6,
     quote: 'She is the adventure I never knew I needed.',
     detail:
       'S/o. Mrs. Leena Alex & Mr. Chacko Alex Karuvelil House, Nedumpuram P.O, Thiruvalla.',
@@ -15,8 +16,7 @@ const couple = [
   {
     name: 'Anju Mariam Sunny',
     role: 'The Bride',
-    image:
-      'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80&auto=format',
+    image: image7,
     quote: 'He makes every ordinary moment extraordinary.',
     detail:
       'D/o. Mrs. Bindu Sunny & Late Mr. Sunny Varghese Malethu Sunny Villa, Thumpamon P.O, Pathanamthitta',
@@ -117,7 +117,7 @@ function PersonCard({
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={person.image}
+            src={person.image.src}
             alt={person.name}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />

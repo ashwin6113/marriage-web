@@ -4,8 +4,8 @@ import { motion, useInView } from "framer-motion";
 
 const events = [
   {
-    year: "2019",
-    month: "March",
+    year: "2025",
+    month: "June",
     title: "The First Meeting",
     description:
       "It was a rainy Tuesday afternoon when fate placed us both at the same coffee shop. A spilled latte, a shared umbrella, and suddenly the world felt a little smaller.",
@@ -13,8 +13,8 @@ const events = [
     align: "right",
   },
   {
-    year: "2020",
-    month: "June",
+    year: "2025",
+    month: "July",
     title: "Our First Date",
     description:
       "A candlelit dinner that turned into a midnight walk along the harbor. We talked for hours and realized we'd found something rare — someone who makes the world make sense.",
@@ -22,8 +22,8 @@ const events = [
     align: "left",
   },
   {
-    year: "2021",
-    month: "December",
+    year: "2025",
+    month: "June",
     title: "Meeting the Families",
     description:
       "Christmas in the mountains with both our families together for the first time. Laughter, snow, and the warmth of knowing this was the beginning of something beautiful.",
@@ -31,8 +31,8 @@ const events = [
     align: "right",
   },
   {
-    year: "2023",
-    month: "August",
+    year: "2025",
+    month: "April",
     title: "The Proposal",
     description:
       "Beneath the Tuscan sunset, with golden light pouring over the vineyards, he got down on one knee. The answer was yes before the words were finished.",
@@ -41,7 +41,7 @@ const events = [
   },
   {
     year: "2026",
-    month: "September",
+    month: "April",
     title: "The Wedding Day",
     description:
       "Now we invite you to share in the next chapter of our story. Join us as two lives, two families, and two futures become one.",

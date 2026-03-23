@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-const WEDDING_DATE = new Date("2026-04-11T11:00:00");
+const WEDDING_DATE = new Date("2026-04-11T11:30:00");
 
 function getTimeLeft() {
   const now = new Date();
@@ -115,7 +115,7 @@ export default function CountdownSection() {
             Counting Down to Forever
           </h2>
           <p className="font-cormorant text-white/60 text-lg mb-12">
-            April 11, 2026 · 11:00 AM · Parumala Church, Thiruvalla
+            April 11, 2026 · 11:30 AM · Parumala Church, Thiruvalla
           </p>
         </motion.div>
 

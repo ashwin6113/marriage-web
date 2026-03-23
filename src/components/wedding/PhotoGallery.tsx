@@ -1,68 +1,52 @@
-"use client";
-import { useState, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+'use client';
+import { useState, useRef } from 'react';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
+import image1 from '../../../public/images/WhatsApp Image 2026-03-20 at 22.17.01.jpeg';
+import image3 from '../../../public/images/WhatsApp Image 2026-03-20 at 22.26.57.jpeg';
+import image4 from '../../../public/images/WhatsApp Image 2026-03-20 at 22.27.05.jpeg';
+import image2 from '../../../public/images/WhatsApp Image 2026-03-20 at 22.29.04.jpeg';
 
 const photos = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80&auto=format",
-    thumb: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&q=80&auto=format",
-    alt: "Wedding ceremony",
-    caption: "The First Dance",
-    span: "row-span-2",
+    src: image1,
+    thumb: image1,
+    alt: 'Wedding ceremony',
+    caption: 'Save the Date',
+    span: 'row-span-2',
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80&auto=format",
-    thumb: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&q=80&auto=format",
-    alt: "Wedding rings",
-    caption: "Forever Bound",
-    span: "",
+    src: image2,
+    thumb: image2,
+    alt: 'Wedding rings',
+    caption: 'Save the Date',
+    span: '',
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80&auto=format",
-    thumb: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80&auto=format",
-    alt: "Wedding bouquet",
-    caption: "Bloom of Love",
-    span: "",
+    src: image3,
+    thumb: image3,
+    alt: 'Wedding bouquet',
+    caption: 'Save the Date',
+    span: '',
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1549417229-aa67d3263c09?w=600&q=80&auto=format",
-    thumb: "https://images.unsplash.com/photo-1549417229-aa67d3263c09?w=400&q=80&auto=format",
-    alt: "Couple portrait",
-    caption: "Together Forever",
-    span: "col-span-2",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80&auto=format",
-    thumb: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&q=80&auto=format",
-    alt: "Wedding reception",
-    caption: "Celebration of Love",
-    span: "row-span-2",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80&auto=format",
-    thumb: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&q=80&auto=format",
-    alt: "Bride portrait",
-    caption: "Pure Elegance",
-    span: "",
-  },
-  {
-    id: 7,
-    src: "https://images.unsplash.com/photo-1594552072238-b8a33785b6cd?w=600&q=80&auto=format",
-    thumb: "https://images.unsplash.com/photo-1594552072238-b8a33785b6cd?w=400&q=80&auto=format",
-    alt: "Wedding table",
-    caption: "The Grand Table",
-    span: "",
+    src: image4,
+    thumb: image4,
+    alt: 'Couple portrait',
+    caption: 'Save the Date',
+    span: 'col-span-2',
   },
 ];
 
-function Photo3DCard({ photo, index, onClick }: {
-  photo: typeof photos[0];
+function Photo3DCard({
+  photo,
+  index,
+  onClick,
+}: {
+  photo: (typeof photos)[0];
   index: number;
   onClick: () => void;
 }) {
@@ -85,16 +69,23 @@ function Photo3DCard({ photo, index, onClick }: {
       className={`relative cursor-pointer overflow-hidden rounded-lg ${photo.span}`}
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
       animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
       style={{
-        transformStyle: "preserve-3d",
+        transformStyle: 'preserve-3d',
         transform: hovered
           ? `perspective(1000px) rotateX(${-mousePos.y * 12}deg) rotateY(${mousePos.x * 12}deg) scale(1.05)`
-          : "perspective(1000px) rotateX(0) rotateY(0) scale(1)",
-        transition: "transform 0.15s ease",
+          : 'perspective(1000px) rotateX(0) rotateY(0) scale(1)',
+        transition: 'transform 0.15s ease',
       }}
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => { setHovered(false); setMousePos({ x: 0, y: 0 }); }}
+      onMouseLeave={() => {
+        setHovered(false);
+        setMousePos({ x: 0, y: 0 });
+      }}
       onMouseMove={handleMouseMove}
       onClick={onClick}
     >
@@ -102,10 +93,10 @@ function Photo3DCard({ photo, index, onClick }: {
       <div className="w-full h-full min-h-[200px] overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={photo.thumb}
+          src={typeof photo.thumb === 'string' ? photo.thumb : photo.thumb.src}
           alt={photo.alt}
           className="w-full h-full object-cover transition-transform duration-700"
-          style={{ transform: hovered ? "scale(1.1)" : "scale(1)" }}
+          style={{ transform: hovered ? 'scale(1.1)' : 'scale(1)' }}
         />
       </div>
 
@@ -113,12 +104,15 @@ function Photo3DCard({ photo, index, onClick }: {
       <motion.div
         className="absolute inset-0 flex flex-col justify-end p-4"
         style={{
-          background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%)",
+          background:
+            'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%)',
           opacity: hovered ? 1 : 0,
-          transition: "opacity 0.3s ease",
+          transition: 'opacity 0.3s ease',
         }}
       >
-        <p className="font-cormorant text-white text-lg italic">{photo.caption}</p>
+        <p className="font-cormorant text-white text-lg italic">
+          {photo.caption}
+        </p>
         <div className="w-8 h-px bg-amber-400 mt-2" />
       </motion.div>
 
@@ -142,12 +136,17 @@ function Photo3DCard({ photo, index, onClick }: {
 }
 
 export default function PhotoGallery() {
-  const [lightbox, setLightbox] = useState<typeof photos[0] | null>(null);
+  const [lightbox, setLightbox] = useState<(typeof photos)[0] | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const inView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   return (
-    <section id="gallery" ref={sectionRef} className="py-24 px-6" style={{ background: "#fdf8f0" }}>
+    <section
+      id="gallery"
+      ref={sectionRef}
+      className="py-24 px-6"
+      style={{ background: '#fdf8f0' }}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -161,7 +160,7 @@ export default function PhotoGallery() {
           </p>
           <h2
             className="font-playfair italic mb-6"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", color: "#2c2c2c" }}
+            style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', color: '#2c2c2c' }}
           >
             Our Gallery
           </h2>
@@ -201,15 +200,21 @@ export default function PhotoGallery() {
                 initial={{ scale: 0.8, opacity: 0, y: 40 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.8, opacity: 0, y: 40 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Gold frame */}
-                <div className="p-1 rounded-lg" style={{ background: "linear-gradient(135deg, #c9a84c, #e8c97a, #9a6f2d)" }}>
+                <div
+                  className="p-1 rounded-lg"
+                  style={{
+                    background:
+                      'linear-gradient(135deg, #c9a84c, #e8c97a, #9a6f2d)',
+                  }}
+                >
                   <div className="rounded-lg overflow-hidden bg-black">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={lightbox.src}
+                      src={typeof lightbox.src === 'string' ? lightbox.src : lightbox.src.src}
                       alt={lightbox.alt}
                       className="w-full object-contain max-h-[75vh]"
                     />
