@@ -5,7 +5,6 @@ import FloatingPetals from "../components/wedding/FloatingPetals";
 import HeroSection from "../components/wedding/HeroSection";
 import Navigation from "../components/wedding/Navigation";
 import PhotoGallery from "../components/wedding/PhotoGallery";
-import RSVPSection from "../components/wedding/RSVPSection";
 import StoryTimeline from "../components/wedding/StoryTimeline";
 import WeddingFooter from "../components/wedding/WeddingFooter";
 
