@@ -1,13 +1,11 @@
+import BibleVersesSection from "../components/wedding/BibleVersesSection";
 import CeremonySection from "../components/wedding/CeremonySection";
 import CountdownSection from "../components/wedding/CountdownSection";
-import CoupleSection from "../components/wedding/CoupleSection";
+import CelebrateBannerSection from "../components/wedding/CelebrateBannerSection";
 import FloatingPetals from "../components/wedding/FloatingPetals";
 import HeroSection from "../components/wedding/HeroSection";
 import Navigation from "../components/wedding/Navigation";
-import PhotoGallery from "../components/wedding/PhotoGallery";
-import StoryTimeline from "../components/wedding/StoryTimeline";
 import WeddingFooter from "../components/wedding/WeddingFooter";
-
 
 export default function Home() {
   return (
@@ -15,9 +13,8 @@ export default function Home() {
       <FloatingPetals />
       <Navigation />
       <HeroSection />
-      <CoupleSection />
-      <StoryTimeline />
-      <PhotoGallery />
+      <CelebrateBannerSection />
+      <BibleVersesSection />
       <CountdownSection />
       <CeremonySection />
       <WeddingFooter />

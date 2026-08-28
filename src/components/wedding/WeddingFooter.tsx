@@ -38,7 +38,7 @@ export default function WeddingFooter() {
             className="font-playfair italic gold-shimmer"
             style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
           >
-            Midhun & Anju
+            Apphia &amp; Hemanth
           </h2>
         </motion.div>
 
@@ -50,7 +50,7 @@ export default function WeddingFooter() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          April 11, 2026 · Saturday, Parumala
+          September 28, 2026 · Monday, Thiruvalla
         </motion.p>
 
         {/* Divider */}
@@ -62,21 +62,24 @@ export default function WeddingFooter() {
 
         {/* Nav links */}
         <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
-          {["Our Story", "Gallery", "Ceremony"].map((item) => (
+          {[
+            { label: "Blessings", href: "#verses" },
+            { label: "Save The Date", href: "#countdown" },
+            { label: "Venue", href: "#ceremony" },
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
+              key={item.label}
+              href={item.href}
               onClick={(e) => {
                 e.preventDefault();
-                const id = item === "Our Story" ? "#story" : `#${item.toLowerCase()}`;
-                document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+                document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
               }}
               className="font-montserrat text-xs tracking-widest uppercase transition-colors"
               style={{ color: "rgba(255,255,255,0.3)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#c9a84c")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
@@ -89,7 +92,7 @@ export default function WeddingFooter() {
         >
           <span style={{ color: "#c9a84c" }}>✦</span>
           <span className="font-montserrat text-xs tracking-widest text-white/50 uppercase">
-            #MidhunAndAnju2026
+            #ApphiaAndHemanth2026
           </span>
           <span style={{ color: "#c9a84c" }}>✦</span>
         </motion.div>

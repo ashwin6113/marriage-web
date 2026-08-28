@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { label: "Our Story", href: "#story" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Ceremony", href: "#ceremony" },
+  { label: "Blessings", href: "#verses" },
+  { label: "Save The Date", href: "#countdown" },
+  { label: "Venue", href: "#ceremony" },
 ];
 
 export default function Navigation() {
@@ -45,11 +45,11 @@ export default function Navigation() {
         {/* Logo */}
         <motion.a
           href="#"
-          className="font-playfair text-2xl italic"
+          className="font-playfair text-2xl italic font-bold"
           style={{ color: scrolled ? "#c9a84c" : "white" }}
           whileHover={{ scale: 1.05 }}
         >
-          M & A
+          A &amp; H
         </motion.a>
 
         {/* Desktop Links */}

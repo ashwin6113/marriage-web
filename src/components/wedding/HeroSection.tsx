@@ -101,22 +101,33 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="font-playfair flex flex-col md:flex-row text-white mb-4"
-          style={{ fontSize: "clamp(3.5rem, 10vw, 7rem)", lineHeight: 1.05, fontStyle: "italic" }}
+          className="font-playfair flex flex-col md:flex-row items-center justify-center text-white mb-4"
+          style={{ fontSize: "clamp(2.8rem, 8vw, 5.5rem)", lineHeight: 1.1, fontStyle: "italic" }}
         >
-          <span className="gold-shimmer" style={{ fontStyle: "italic" }}>Midhun</span>
-          <span className="text-white/60 mx-4 font-light" style={{ fontStyle: "normal" }}>&amp;</span>
-          <span className="gold-shimmer" style={{ fontStyle: "italic" }}>Anju</span>
+          <span className="gold-shimmer" style={{ fontStyle: "italic" }}>Apphia</span>
+          <span className="text-white/60 mx-4 font-light text-3xl md:text-5xl" style={{ fontStyle: "normal" }}>&amp;</span>
+          <span className="gold-shimmer" style={{ fontStyle: "italic" }}>Hemanth</span>
         </motion.h1>
+
+        {/* Full Bride & Groom Names Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
+          className="font-cormorant text-amber-200/90 text-lg md:text-xl tracking-wider mb-6"
+        >
+          Apphia Mariam Mathew &amp; Hemanth R S
+        </motion.p>
 
         {/* Date */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
-          className="font-cormorant text-white/80 text-xl md:text-2xl tracking-widest mb-12"
+          className="font-cormorant text-white/80 text-xl md:text-2xl tracking-widest mb-10"
         >
-          April 11, 2026 · 11:30 AM <br/> St. Peter and St. Pauls Church, Parumala, Thiruvalla
+          September 28, 2026 <br/>
+          <span className="text-amber-300/90 text-lg">Yahir Yahir Auditorium, Vallamkulam East, Thiruvalla</span>
         </motion.p>
 
         {/* CTA Buttons */}
@@ -126,11 +137,11 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="#rsvp" onClick={(e) => { e.preventDefault(); document.querySelector('#rsvp')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn-gold">
-            Watch Live
+          <a href="#ceremony" onClick={(e) => { e.preventDefault(); document.querySelector('#ceremony')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn-gold">
+            Venue Details
           </a>
-          <a href="#story" onClick={(e) => { e.preventDefault(); document.querySelector('#story')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn-outline-gold border-white text-white hover:bg-white hover:text-gray-800">
-            Our Story
+          <a href="#verses" onClick={(e) => { e.preventDefault(); document.querySelector('#verses')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn-outline-gold border-white text-white hover:bg-white hover:text-gray-800">
+            Scripture Verses
           </a>
         </motion.div>
       </motion.div>
