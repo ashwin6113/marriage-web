@@ -181,7 +181,7 @@ export default function HeroSection() {
           >
             Venue Details
           </a>
-          <a
+          {/* <a
             href="#verses"
             onClick={(e) => {
               e.preventDefault();
@@ -192,7 +192,7 @@ export default function HeroSection() {
             className="btn-outline-gold border-white text-white hover:bg-white hover:text-gray-800"
           >
             Scripture Verses
-          </a>
+          </a> */}
         </motion.div>
       </motion.div>
 
