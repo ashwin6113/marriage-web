@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { label: "Blessings", href: "#verses" },
-  { label: "Save The Date", href: "#countdown" },
   { label: "Venue", href: "#ceremony" },
 ];
 
