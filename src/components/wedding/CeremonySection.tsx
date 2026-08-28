@@ -49,14 +49,14 @@ export default function CeremonySection() {
           transition={{ duration: 0.9 }}
         >
           {/* Image Column */}
-          <div className="md:col-span-6 relative min-h-[320px] md:min-h-full overflow-hidden group">
+          <div className="md:col-span-6 relative min-h-80 md:min-h-full overflow-hidden group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={venueDetails.image}
               alt={venueDetails.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/30" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent md:bg-linear-to-r md:from-transparent md:to-black/30" />
             <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-amber-300/40">
               <span className="font-montserrat text-xs font-semibold text-amber-800 tracking-wider uppercase">
                 {venueDetails.date}

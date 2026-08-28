@@ -74,7 +74,7 @@ function TimelineEvent({ event, index }: { event: typeof events[0]; index: numbe
       </motion.div>
 
       {/* Center dot */}
-      <div className="relative flex-shrink-0 z-10">
+      <div className="relative shrink-0 z-10">
         <motion.div
           className="w-14 h-14 rounded-full flex items-center justify-center"
           style={{
@@ -135,7 +135,7 @@ function TimelineImage({ event, small }: { event: typeof events[0]; small?: bool
         alt={event.title}
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
       <div className="absolute top-3 left-3">
         <span className="font-montserrat text-xs text-amber-300 tracking-widest uppercase">
           {event.month} {event.year}
