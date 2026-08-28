@@ -36,8 +36,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Midhun & Anju | Wedding 2026",
-  description: "Join us to celebrate the wedding of Midhun and Anju on April 11, 2026 in Parumala Church, Thiruvalla.",
+  title: "Apphia & Hemanth | Wedding 2026",
+  description: "Join us to celebrate the wedding of Apphia Mariam Mathew and Hemanth R S on September 28, 2026 at Yahir Yahir Auditorium, Thiruvalla, Kerala.",
 };
 
 export default function RootLayout({
