@@ -3,14 +3,14 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const venueDetails = {
-  name: "Yahir Yahir Auditorium",
+  name: "Yahir Auditorium",
   address: "TK Rd, Vallamkulam East, Thiruvalla, Eraviperoor, Kerala",
   date: "September 28, 2026",
   description:
-    "We cordially invite you to celebrate our holy matrimony at Yahir Yahir Auditorium. Join us as we exchange our vows and begin our new journey together.",
+    "We cordially invite you to celebrate our holy matrimony at Yahir Auditorium. Join us as we exchange our vows and begin our new journey together.",
   image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80&auto=format",
   googleMapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Yahir+Yahir+Auditorium+Vallamkulam+East+Thiruvalla+Kerala",
+    "https://www.google.com/maps/search/?api=1&query=Yahir+Auditorium+Vallamkulam+East+Thiruvalla+Kerala",
 };
 
 export default function CeremonySection() {
@@ -21,7 +21,7 @@ export default function CeremonySection() {
     <section id="ceremony" ref={sectionRef} className="py-24 px-6" style={{ background: "#fdf8f0" }}>
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <motion.div
+        {/* <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -39,7 +39,7 @@ export default function CeremonySection() {
           <div className="ornamental-divider max-w-xs mx-auto">
             <span className="font-cormorant text-amber-500 text-xl">✦</span>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Main Venue Feature Card */}
         <motion.div

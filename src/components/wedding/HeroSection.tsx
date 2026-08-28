@@ -3,23 +3,28 @@ import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 // Unsplash free-to-use wedding photos
-const HERO_BG = "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80&auto=format";
-const HERO_COUPLE = "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80&auto=format";
+const HERO_BG =
+  "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80&auto=format";
+const HERO_COUPLE =
+  "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80&auto=format";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
-    <section ref={containerRef} className="relative h-screen overflow-hidden flex items-center justify-center">
+    <section
+      ref={containerRef}
+      className="relative h-screen overflow-hidden flex items-center justify-center"
+    >
       {/* Parallax Background */}
-      <motion.div
-        className="absolute inset-0 scale-110"
-        style={{ y: bgY }}
-      >
+      <motion.div className="absolute inset-0 scale-110" style={{ y: bgY }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={HERO_BG}
@@ -78,12 +83,20 @@ export default function HeroSection() {
           initial={{ opacity: 0, letterSpacing: "0.3em" }}
           animate={{ opacity: 1, letterSpacing: "0.5em" }}
           transition={{ duration: 1.2, delay: 0.3 }}
-          className="font-montserrat text-xs text-amber-300/90 uppercase mb-6"
+          className="font-montserrat text-[16px] text-amber-300/90 uppercase mb-6"
           style={{ letterSpacing: "0.5em" }}
         >
-          We are getting married
+          "He has made everything beautiful in its time" Ecclesiastes 3:11
         </motion.p>
-
+        <motion.p
+          initial={{ opacity: 0, letterSpacing: "0.3em" }}
+          animate={{ opacity: 1, letterSpacing: "0.5em" }}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="font-montserrat text-2xl text-amber-300/90 uppercase mb-6 font-bold"
+          style={{ letterSpacing: "0.5em" }}
+        >
+          You are Invited
+        </motion.p>
         {/* Decorative line */}
         <motion.div
           initial={{ scaleX: 0 }}
@@ -100,13 +113,30 @@ export default function HeroSection() {
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{
+            duration: 1.2,
+            delay: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }}
           className="font-playfair flex flex-col md:flex-row items-center justify-center text-white mb-4"
-          style={{ fontSize: "clamp(2.8rem, 8vw, 5.5rem)", lineHeight: 1.1, fontStyle: "italic" }}
+          style={{
+            fontSize: "clamp(2.8rem, 8vw, 5.5rem)",
+            lineHeight: 1.1,
+            fontStyle: "italic",
+          }}
         >
-          <span className="gold-shimmer" style={{ fontStyle: "italic" }}>Apphia</span>
-          <span className="text-white/60 mx-4 font-light text-3xl md:text-5xl" style={{ fontStyle: "normal" }}>&amp;</span>
-          <span className="gold-shimmer" style={{ fontStyle: "italic" }}>Hemanth</span>
+          <span className="gold-shimmer" style={{ fontStyle: "italic" }}>
+            Apphia
+          </span>
+          <span
+            className="text-white/60 mx-4 font-light text-3xl md:text-5xl"
+            style={{ fontStyle: "normal" }}
+          >
+            &amp;
+          </span>
+          <span className="gold-shimmer" style={{ fontStyle: "italic" }}>
+            Hemanth
+          </span>
         </motion.h1>
 
         {/* Full Bride & Groom Names Subtitle */}
@@ -126,8 +156,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.3 }}
           className="font-cormorant text-white/80 text-xl md:text-2xl tracking-widest mb-10"
         >
-          September 28, 2026 <br/>
-          <span className="text-amber-300/90 text-lg">Yahir Yahir Auditorium, Vallamkulam East, Thiruvalla</span>
+          September 28, 2026 <br />
+          <span className="text-amber-300/90 text-lg">
+            Yahir Auditorium, Vallamkulam East, Thiruvalla
+          </span>
         </motion.p>
 
         {/* CTA Buttons */}
@@ -137,10 +169,28 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="#ceremony" onClick={(e) => { e.preventDefault(); document.querySelector('#ceremony')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn-gold">
+          <a
+            href="#ceremony"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .querySelector("#ceremony")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="btn-gold"
+          >
             Venue Details
           </a>
-          <a href="#verses" onClick={(e) => { e.preventDefault(); document.querySelector('#verses')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn-outline-gold border-white text-white hover:bg-white hover:text-gray-800">
+          <a
+            href="#verses"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .querySelector("#verses")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="btn-outline-gold border-white text-white hover:bg-white hover:text-gray-800"
+          >
             Scripture Verses
           </a>
         </motion.div>
@@ -154,7 +204,9 @@ export default function HeroSection() {
         transition={{ delay: 2 }}
         style={{ opacity }}
       >
-        <p className="font-montserrat text-white/50 text-xs tracking-widest uppercase">Scroll</p>
+        <p className="font-montserrat text-white/50 text-xs tracking-widest uppercase">
+          Scroll
+        </p>
         <motion.div
           className="w-px h-12 bg-gradient-to-b from-white/50 to-transparent"
           animate={{ scaleY: [0, 1, 0] }}

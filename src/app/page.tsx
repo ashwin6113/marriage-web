@@ -13,10 +13,10 @@ export default function Home() {
       <FloatingPetals />
       <Navigation />
       <HeroSection />
-      <CelebrateBannerSection />
-      <BibleVersesSection />
+      {/* <BibleVersesSection /> */}
       <CountdownSection />
       <CeremonySection />
+      <CelebrateBannerSection />
       <WeddingFooter />
     </main>
   );

@@ -11,7 +11,8 @@ export default function WeddingFooter() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse at center bottom, rgba(201,168,76,0.08) 0%, transparent 60%)",
+          background:
+            "radial-gradient(ellipse at center bottom, rgba(201,168,76,0.08) 0%, transparent 60%)",
         }}
       />
 
@@ -33,12 +34,28 @@ export default function WeddingFooter() {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <p className="font-playfair italic text-white/40 text-sm mb-3">With all our love,</p>
+          <p className="font-playfair italic text-white/40 text-sm mb-3">
+            With all our love,
+          </p>
           <h2
             className="font-playfair italic gold-shimmer"
             style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
           >
             Apphia &amp; Hemanth
+          </h2>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-6"
+        >
+          <p className="font-playfair italic text-white/40 text-xl mb-3">
+            Mark 10:9
+          </p>
+          <h2 className="font-playfair italic gold-shimmer text-2xl">
+            " Therefore what God has joined together, let no one separate "
           </h2>
         </motion.div>
 
@@ -55,16 +72,26 @@ export default function WeddingFooter() {
 
         {/* Divider */}
         <div className="flex items-center justify-center gap-4 mb-10">
-          <div className="h-px w-20" style={{ background: "linear-gradient(to right, transparent, rgba(201,168,76,0.4))" }} />
+          <div
+            className="h-px w-20"
+            style={{
+              background:
+                "linear-gradient(to right, transparent, rgba(201,168,76,0.4))",
+            }}
+          />
           <span style={{ color: "rgba(201,168,76,0.6)" }}>♥</span>
-          <div className="h-px w-20" style={{ background: "linear-gradient(to left, transparent, rgba(201,168,76,0.4))" }} />
+          <div
+            className="h-px w-20"
+            style={{
+              background:
+                "linear-gradient(to left, transparent, rgba(201,168,76,0.4))",
+            }}
+          />
         </div>
 
         {/* Nav links */}
         <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
           {[
-            { label: "Blessings", href: "#verses" },
-            { label: "Save The Date", href: "#countdown" },
             { label: "Venue", href: "#ceremony" },
           ].map((item) => (
             <a
@@ -72,12 +99,16 @@ export default function WeddingFooter() {
               href={item.href}
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
+                document
+                  .querySelector(item.href)
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="font-montserrat text-xs tracking-widest uppercase transition-colors"
               style={{ color: "rgba(255,255,255,0.3)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#c9a84c")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.color = "rgba(255,255,255,0.3)")
+              }
             >
               {item.label}
             </a>
@@ -87,7 +118,10 @@ export default function WeddingFooter() {
         {/* Hashtag */}
         <motion.div
           className="inline-flex items-center gap-3 px-6 py-3 rounded-full mb-10"
-          style={{ border: "1px solid rgba(201,168,76,0.2)", background: "rgba(201,168,76,0.05)" }}
+          style={{
+            border: "1px solid rgba(201,168,76,0.2)",
+            background: "rgba(201,168,76,0.05)",
+          }}
           whileHover={{ scale: 1.05, borderColor: "rgba(201,168,76,0.4)" }}
         >
           <span style={{ color: "#c9a84c" }}>✦</span>

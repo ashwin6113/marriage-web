@@ -115,7 +115,7 @@ export default function CountdownSection() {
             Counting Down to Forever
           </h2>
           <p className="font-cormorant text-white/60 text-lg mb-12">
-            September 28, 2026 · Yahir Yahir Auditorium, Thiruvalla
+            September 28, 2026 · Yahir Auditorium, Thiruvalla
           </p>
         </motion.div>
 
