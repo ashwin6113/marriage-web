@@ -90,7 +90,7 @@ function Photo3DCard({
       onClick={onClick}
     >
       {/* Image */}
-      <div className="w-full h-full min-h-[200px] overflow-hidden">
+      <div className="w-full h-full min-h-50 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={typeof photo.thumb === 'string' ? photo.thumb : photo.thumb.src}

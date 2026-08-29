@@ -31,8 +31,8 @@ export default function HeroSection() {
           alt="Wedding backdrop"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/60" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/20 via-transparent to-black/20" />
       </motion.div>
 
       {/* Decorative Rings */}
@@ -104,9 +104,9 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.6 }}
           className="flex items-center justify-center gap-4 mb-8"
         >
-          <div className="h-px w-16 bg-gradient-to-r from-transparent to-amber-400/60" />
+          <div className="h-px w-16 bg-linear-to-r from-transparent to-amber-400/60" />
           <div className="w-2 h-2 rounded-full bg-amber-400/60 animate-pulse" />
-          <div className="h-px w-16 bg-gradient-to-l from-transparent to-amber-400/60" />
+          <div className="h-px w-16 bg-linear-to-l from-transparent to-amber-400/60" />
         </motion.div>
 
         {/* Names */}
@@ -156,10 +156,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.3 }}
           className="font-cormorant text-white/80 text-xl md:text-2xl tracking-widest mb-10"
         >
-          September 28, 2026 <br />
-          <span className="text-amber-300/90 text-lg">
+          Sep 28 Monday, 2026 <br />
+          {/* <span className="text-amber-300/90 text-lg">
             Yahir Auditorium, Vallamkulam East, Thiruvalla
-          </span>
+          </span> */}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -208,7 +208,7 @@ export default function HeroSection() {
           Scroll
         </p>
         <motion.div
-          className="w-px h-12 bg-gradient-to-b from-white/50 to-transparent"
+          className="w-px h-12 bg-linear-to-b from-white/50 to-transparent"
           animate={{ scaleY: [0, 1, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           style={{ originY: 0 }}
@@ -216,7 +216,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Bottom gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#fdf8f0] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-[#fdf8f0] to-transparent" />
     </section>
   );
 }

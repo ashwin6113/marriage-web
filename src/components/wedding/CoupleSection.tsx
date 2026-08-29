@@ -121,7 +121,7 @@ function PersonCard({
             alt={person.name}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+          <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/20" />
         </motion.div>
 
         {/* Gold ring */}
