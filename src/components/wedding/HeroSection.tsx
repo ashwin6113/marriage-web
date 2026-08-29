@@ -156,10 +156,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.3 }}
           className="font-cormorant text-white/80 text-xl md:text-2xl tracking-widest mb-10"
         >
-          September 28, 2026 <br />
-          <span className="text-amber-300/90 text-lg">
+          Sep 28 Monday, 2026 <br />
+          {/* <span className="text-amber-300/90 text-lg">
             Yahir Auditorium, Vallamkulam East, Thiruvalla
-          </span>
+          </span> */}
         </motion.p>
 
         {/* CTA Buttons */}

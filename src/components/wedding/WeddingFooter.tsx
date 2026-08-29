@@ -90,7 +90,7 @@ export default function WeddingFooter() {
         </div>
 
         {/* Nav links */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
+        {/* <div className="flex flex-wrap items-center justify-center gap-6 mb-10">
           {[
             { label: "Venue", href: "#ceremony" },
           ].map((item) => (
@@ -113,7 +113,7 @@ export default function WeddingFooter() {
               {item.label}
             </a>
           ))}
-        </div>
+        </div> */}
 
         {/* Hashtag */}
         <motion.div
