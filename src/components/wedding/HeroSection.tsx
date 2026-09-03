@@ -140,13 +140,21 @@ export default function HeroSection() {
         </motion.h1>
 
         {/* Full Bride & Groom Names Subtitle */}
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
           className="font-cormorant text-amber-200/90 text-lg md:text-xl tracking-wider mb-6"
         >
           Apphia Mariam Mathew &amp; Hemanth R S
+        </motion.p> */}
+         <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
+          className="font-cormorant text-amber-200/90 text-lg md:text-xl tracking-wider mb-6"
+        >
+          Are Getting Married
         </motion.p>
 
         {/* Date */}
