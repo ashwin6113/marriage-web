@@ -1,37 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Apphia & Hemanth — Wedding Website
 
-## Getting Started
+An industrial-grade, responsive Next.js application built to celebrate the wedding of **Apphia Mariam Mathew** and **Hemanth R S** on **September 28, 2026** at **Yahir Yahir Auditorium, Thiruvalla, Kerala**.
 
-First, run the development server:
+---
+
+## 🛠️ Technology Stack & Architecture
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: TypeScript 5 (Strict Mode)
+- **Styling**: Tailwind CSS v4 & Custom CSS variables
+- **Animations**: Framer Motion
+- **Fonts**: Google Fonts (`Playfair Display`, `Cormorant Garamond`, `Montserrat`, `Geist`)
+- **Version Control & Quality**: Husky, ESLint, TypeScript Type Checking
+
+---
+
+## 📋 Features
+
+- **Hero Section**: Elegant typography, parallax background, and quick action links.
+- **Celebration Banner**: Framed display of custom invitation image asset (`public/images/celebrate_banner.jpg`).
+- **Bible Verses**: Displaying scriptures from *Ecclesiastes 3:11* and *Mark 10:9*.
+- **Save the Date & Countdown**: Real-time live countdown to September 28, 2026.
+- **Venue Details**: Comprehensive location info for **Yahir Yahir Auditorium, Thiruvalla** with interactive Google Maps link.
+- **Footer**: Custom monogram (`A & H`), wedding hashtag (`#ApphiaAndHemanth2026`), and smooth navigation.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have **Node.js 18+** and **npm** installed.
+
+### Installation
+
+```bash
+git clone <repository-url>
+cd marriage-web
+npm install
+```
+
+### Development Server
+
+Run the development server locally:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Quality Assurance & Building
 
-## Learn More
+This repository maintains strict code standards across TypeScript types, linting rules, and production bundle optimization.
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Type Checking
+Validate all TypeScript definitions across the codebase:
+```bash
+npm run typecheck
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Production Build
+Build and optimize the application for production deployment:
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Start Production Server
+Preview the production build locally:
+```bash
+npm run start
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Versioning & Change Logs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# marriage-web
+This project follows **[Semantic Versioning 2.0.0](https://semver.org/)** and maintains a structured **[CHANGELOG.md](./CHANGELOG.md)** adhering to the **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/)** convention.
+
+- Current Version: **`1.0.0`**
+- Release History: See [CHANGELOG.md](./CHANGELOG.md)
